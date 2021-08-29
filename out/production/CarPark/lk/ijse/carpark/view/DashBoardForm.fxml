@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="root" prefHeight="418.0" prefWidth="717.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.carpark.controller.DashBoardFormController">
+   <children>
+      <Label layoutX="8.0" layoutY="67.0" prefHeight="26.0" prefWidth="149.0" style="-fx-background-color: white;" text="Select Vehicle :">
+         <font>
+            <Font name="Courier New Bold" size="15.0" />
+         </font>
+      </Label>
+      <JFXComboBox fx:id="cmbSelectVehicleNumber" focusColor="#3535ff" layoutX="161.0" layoutY="66.0" onAction="#cmbSelectVehicleTypeOnAction" prefHeight="25.0" prefWidth="163.0" unFocusColor="BLACK">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></JFXComboBox>
+      <JFXTextField fx:id="txtVehicleType" editable="false" focusColor="#3535ff" layoutX="161.0" layoutY="120.0" prefHeight="25.0" prefWidth="163.0" unFocusColor="BLACK" />
+      <JFXComboBox fx:id="cmbSelectDriver" focusColor="#3535ff" layoutX="161.0" layoutY="166.0" onAction="#cmbSelectDriver" prefHeight="25.0" prefWidth="163.0" unFocusColor="BLACK">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></JFXComboBox>
+      <AnchorPane layoutX="84.0" layoutY="226.0" prefHeight="144.0" prefWidth="300.0" style="-fx-background-color: #b2bec3;">
+         <children>
+            <Label layoutX="4.0" layoutY="6.0" prefHeight="59.0" prefWidth="292.0" text="Your Parking Slot Number">
+               <font>
+                  <Font name="Courier New Bold" size="20.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblSlotNumber" layoutX="114.0" layoutY="56.0" prefHeight="73.0" prefWidth="55.0" text="13">
+               <font>
+                  <Font name="Courier New Bold" size="63.0" />
+               </font>
+            </Label>
+         </children></AnchorPane>
+      <Label layoutX="27.0" layoutY="120.0" prefHeight="26.0" prefWidth="131.0" style="-fx-background-color: white;" text="Vehicle Type :">
+         <font>
+            <Font name="Courier New Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="81.0" layoutY="166.0" prefHeight="26.0" prefWidth="74.0" style="-fx-background-color: white;" text="Driver :">
+         <font>
+            <Font name="Courier New Bold" size="15.0" />
+         </font>
+      </Label>
+      <AnchorPane layoutX="427.0" layoutY="67.0" prefHeight="59.0" prefWidth="257.0" style="-fx-background-color: #b2bec3;">
+         <children>
+            <Label fx:id="lblDate" layoutX="4.0" layoutY="2.0" prefHeight="17.0" prefWidth="85.0" text="22/08/2021">
+               <font>
+                  <Font name="Courier New Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblTime" layoutX="47.0" layoutY="18.0" prefHeight="40.0" prefWidth="197.0" text="08:35 AM " textAlignment="CENTER">
+               <font>
+                  <Font name="Courier New Bold" size="27.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <JFXButton fx:id="btnParkVehicle" layoutX="427.0" layoutY="154.0" onAction="#parkVehicleOnAction" prefHeight="50.0" prefWidth="257.0" style="-fx-border-color: black; -fx-background-color: #b2bec3;" text="Park Vehicle">
+         <font>
+            <Font name="Courier New Bold" size="18.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton fx:id="btnOnDeliveryShift" layoutX="427.0" layoutY="217.0" onAction="#onDeliveryShiftOnAction" prefHeight="50.0" prefWidth="257.0" style="-fx-border-color: black; -fx-background-color: #b2bec3;" text="On Delivery Shift">
+         <font>
+            <Font name="Courier New Bold" size="18.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton fx:id="btnManagementLogin" layoutX="427.0" layoutY="311.0" onAction="#managementLoginOnAction" prefHeight="50.0" prefWidth="257.0" style="-fx-border-color: black;" text="Management Log In">
+         <font>
+            <Font name="Courier New Bold" size="18.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+   </children>
+</AnchorPane>

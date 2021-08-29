@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="418.0" prefWidth="717.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.vehiclepark.controller.ManagementDashBoardFormController">
+   <children>
+      <ComboBox fx:id="cmbStatus" layoutX="43.0" layoutY="46.0" onAction="#cmbManagementDash" prefHeight="32.0" prefWidth="170.0" promptText="Select">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></ComboBox>
+      <JFXButton fx:id="btnAddVehicle" layoutX="251.0" layoutY="40.0" onAction="#addVehicleOnAction" prefHeight="45.0" prefWidth="145.0" style="-fx-border-color: black;" text="Add Vehicle">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton fx:id="btnAddDriver" layoutX="415.0" layoutY="40.0" onAction="#addDriverOnAction" prefHeight="45.0" prefWidth="145.0" style="-fx-border-color: black;" text="Add Driver">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton fx:id="btnLogOut" layoutX="608.0" layoutY="40.0" onAction="#logOutOnAction" prefHeight="45.0" prefWidth="69.0" style="-fx-border-color: black;" text="Log Out">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <AnchorPane fx:id="tblRoot" layoutX="22.0" layoutY="106.0" prefHeight="280.0" prefWidth="674.0">
+         <children>
+            <TableView fx:id="tblVehicle" layoutX="20.0" layoutY="26.0" prefHeight="228.0" prefWidth="634.0">
+              <columns>
+                <TableColumn fx:id="colVehicleNumber" prefWidth="185.0" text="Vehicle Number" />
+                <TableColumn fx:id="colVehicleType" prefWidth="158.0" text="Vehicle Type" />
+                  <TableColumn fx:id="colMaximumWeight" prefWidth="135.0" text="Maximum Weight" />
+                  <TableColumn fx:id="colNoOfPassenger" prefWidth="155.0" text="No Of Passengers" />
+              </columns>
+            </TableView>
+            <TableView fx:id="tblInParkingVehicle" layoutX="20.0" layoutY="26.0" prefHeight="228.0" prefWidth="634.0" visible="false">
+              <columns>
+                <TableColumn fx:id="colInParkingVehicleNumber" prefWidth="164.0" text="Vehicle Number" />
+                <TableColumn fx:id="colInParkingVehicleType" prefWidth="136.0" text="Vehicle Type" />
+                  <TableColumn fx:id="colInParkingVehicleSlot" prefWidth="156.0" text="Parking Slot" />
+                  <TableColumn fx:id="colInParkingVehicleParkedTime" prefWidth="177.0" text="Parked Time" />
+              </columns>
+            </TableView>
+            <TableView fx:id="tblOnDelivery" layoutX="20.0" layoutY="26.0" prefHeight="228.0" prefWidth="634.0" visible="false">
+              <columns>
+                <TableColumn fx:id="colOnDeliveryVehicleNumber" prefWidth="155.0" text="Vehicle Number" />
+                <TableColumn fx:id="colOnDeliveryVehicleType" prefWidth="136.0" text="Vehicle Type" />
+                  <TableColumn fx:id="colOnDeliveryDriverName" prefWidth="166.0" text="Driver Name" />
+                  <TableColumn fx:id="colLeftTime" prefWidth="176.0" text="Left Time" />
+              </columns>
+            </TableView>
+            <TableView fx:id="tblDriver" layoutX="20.0" layoutY="26.0" prefHeight="228.0" prefWidth="634.0" visible="false">
+              <columns>
+                <TableColumn fx:id="colDriverName" prefWidth="133.0" text="Driver Name" />
+                <TableColumn fx:id="colDriverNic" minWidth="0.0" prefWidth="103.0" text="NIC" />
+                  <TableColumn fx:id="colDriverLiNo" minWidth="0.0" prefWidth="144.0" text="Driving License No :" />
+                  <TableColumn fx:id="colDriverAddress" minWidth="0.0" prefWidth="139.0" text="Address" />
+                  <TableColumn fx:id="colDriverContactNo" minWidth="0.0" prefWidth="114.0" text="Contacrt Number" />
+              </columns>
+            </TableView>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
